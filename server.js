@@ -12,6 +12,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.set('view engine', 'ejs');
 
+app.get('/error-test', (req, res) => {
+    throw new Error('Testing error alert in Azure');
+});
+
 // Koneksi ke MongoDB Atlas
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('✅ Terhubung ke MongoDB Atlas'))
