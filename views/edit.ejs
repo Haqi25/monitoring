@@ -1,0 +1,12 @@
+<form action="/edit/<%= product._id %>" method="POST">
+    <div class="mb-3">
+      <label>Nama Produk</label>
+      <input type="text" name="name" value="<%= product.name %>" class="form-control" required />
+    </div>
+    <div class="mb-3">
+      <label>Harga Produk</label>
+      <input type="number" name="price" value="<%= product.price %>" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-warning">Simpan</button>
+  </form>
+  
